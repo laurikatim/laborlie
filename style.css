@@ -80,6 +80,39 @@ button:hover {
   border: 1px solid #ffd2e1;
 }
 
+#normalValuesBox {
+  margin: 20px auto;
+  max-width: 600px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid #ffd2e1;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(122, 47, 82, 0.12);
+}
+
+#normalValuesBox h3 {
+  margin-top: 0;
+  color: #7a2f52;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 18px;
+  text-align: left;
+}
+
+.values-grid p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .modal {
   display: none;
   position: fixed;
