@@ -12,6 +12,17 @@ fetch("cases.json")
     startQuiz(10);
   });
 
+function startInfinite() {
+  mode = "infinite";
+  score = 0;
+  streak = 0;
+
+  document.getElementById("score").innerText = score;
+  document.getElementById("streak").innerText = streak;
+
+  loadCase();
+}
+
 function startQuiz(number) {
   totalQuestions = number;
   score = 0;
