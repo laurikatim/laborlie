@@ -1,5 +1,6 @@
 let cases = [];
 let quizCases = [];
+let currentCase = null;
 let currentIndex = 0;
 let score = 0;
 let streak = 0;
@@ -10,7 +11,6 @@ fetch("cases.json")
   .then(res => res.json())
   .then(data => {
     cases = data;
-    startQuiz(10);
   });
 
 function startInfinite() {
@@ -51,6 +51,7 @@ function loadCase() {
       return;
     }
     c = quizCases[currentIndex];
+    currentCase = c;
   }
 
   document.getElementById("difficulty").innerText = c.difficulty || "easy";
@@ -61,7 +62,9 @@ function loadCase() {
   const choicesDiv = document.getElementById("choices");
   choicesDiv.innerHTML = "";
 
-  c.choices.forEach(choice => {
+  let shuffledChoices = shuffle([...c.choices]);
+
+  shuffledChoices.forEach(choice => {
     let btn = document.createElement("button");
     btn.innerText = choice;
     btn.onclick = () => checkAnswer(choice);
@@ -70,7 +73,7 @@ function loadCase() {
 }
 
 function checkAnswer(choice) {
-  const c = quizCases[currentIndex];
+  const c = currentCase;
   const buttons = document.querySelectorAll("#choices button");
 
   buttons.forEach(btn => {
