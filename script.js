@@ -145,6 +145,16 @@ function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
+function toggleNormalValues() {
+  const box = document.getElementById("normalValuesBox");
+
+  if (box.style.display === "none") {
+    box.style.display = "block";
+  } else {
+    box.style.display = "none";
+  }
+}
+
 function openNormalValues() {
   document.getElementById("normalModal").style.display = "block";
 }
