@@ -2,7 +2,7 @@
   {
     "category": "Endocrine",
     "difficulty": "Easy",
-    "labs": "Na: 120\nK: 5.8\nGlucose: 2.5",
+    "labs": "Na: 120 mmol/L\nK: 5.8 mmol/L\nGlucose: 2.5 mmol/L",
     "choices": [
       "Adrenal insufficiency",
       "DKA",
@@ -10,12 +10,12 @@
       "This patient cannot exist"
     ],
     "answer": "Adrenal insufficiency",
-    "explanation": "Hyponatremia + hyperkalemia + hypoglycemia = adrenal insufficiency"
+    "explanation": "Cortisol and aldosterone deficiency → hyponatremia (water retention), hyperkalemia (↓ K excretion), and hypoglycemia. Classic adrenal insufficiency pattern."
   },
   {
     "category": "Impossible",
     "difficulty": "Hard",
-    "labs": "K: 14\npH: 7.9\nPatient texting normally",
+    "labs": "K: 14 mmol/L\npH: 7.90\nPatient texting normally",
     "choices": [
       "Hyperkalemia",
       "Metabolic alkalosis",
@@ -23,6 +23,240 @@
       "This patient cannot exist"
     ],
     "answer": "This patient cannot exist",
-    "explanation": "K of 14 is incompatible with life 😭"
+    "explanation": "K > 10 mmol/L typically causes fatal arrhythmias. Combined with severe alkalemia (pH 7.9), normal function is physiologically impossible."
+  },
+  {
+    "category": "Endocrine",
+    "difficulty": "Easy",
+    "labs": "Glucose: 28 mmol/L\nKetones: positive\npH: 7.18\nHCO3: 10 mmol/L",
+    "choices": [
+      "DKA",
+      "SIADH",
+      "Primary hyperaldosteronism",
+      "This patient cannot exist"
+    ],
+    "answer": "DKA",
+    "explanation": "Insulin deficiency → hyperglycemia + ketone production → metabolic acidosis (low pH, low bicarbonate). Classic diabetic ketoacidosis."
+  },
+  {
+    "category": "Renal",
+    "difficulty": "Easy",
+    "labs": "Creatinine: 420 µmol/L\nUrea: 28 mmol/L\nK: 6.4 mmol/L\nHCO3: 15 mmol/L",
+    "choices": [
+      "Acute kidney injury",
+      "Iron deficiency anemia",
+      "Hyperthyroidism",
+      "This patient cannot exist"
+    ],
+    "answer": "Acute kidney injury",
+    "explanation": "Impaired renal function → accumulation of creatinine/urea, decreased potassium excretion (hyperkalemia), and metabolic acidosis."
+  },
+  {
+    "category": "Acid-base",
+    "difficulty": "Medium",
+    "labs": "pH: 7.25\nPaCO2: 60 mmHg\nHCO3: 26 mmol/L",
+    "choices": [
+      "Respiratory acidosis",
+      "Metabolic alkalosis",
+      "Respiratory alkalosis",
+      "This patient cannot exist"
+    ],
+    "answer": "Respiratory acidosis",
+    "explanation": "Low pH + elevated CO2 = primary respiratory acidosis. Bicarbonate is near normal → minimal/early compensation."
+  },
+  {
+    "category": "Acid-base",
+    "difficulty": "Medium",
+    "labs": "pH: 7.52\nPaCO2: 25 mmHg\nHCO3: 22 mmol/L",
+    "choices": [
+      "Respiratory alkalosis",
+      "Metabolic acidosis",
+      "DKA",
+      "This patient cannot exist"
+    ],
+    "answer": "Respiratory alkalosis",
+    "explanation": "High pH + low CO2 indicates primary respiratory alkalosis, usually from hyperventilation."
+  },
+  {
+    "category": "Hematology",
+    "difficulty": "Easy",
+    "labs": "Hb: 75 g/L\nMCV: 68 fL\nFerritin: 5 µg/L",
+    "choices": [
+      "Iron deficiency anemia",
+      "B12 deficiency",
+      "Hemochromatosis",
+      "This patient cannot exist"
+    ],
+    "answer": "Iron deficiency anemia",
+    "explanation": "Microcytic anemia (low MCV) with low ferritin confirms iron deficiency."
+  },
+  {
+    "category": "Hematology",
+    "difficulty": "Easy",
+    "labs": "Hb: 82 g/L\nMCV: 112 fL\nB12: low\nNeutrophils: low",
+    "choices": [
+      "B12 deficiency",
+      "Iron deficiency anemia",
+      "Polycythemia vera",
+      "This patient cannot exist"
+    ],
+    "answer": "B12 deficiency",
+    "explanation": "Macrocytic anemia (high MCV) with low B12 and cytopenias (e.g., neutropenia) suggests B12 deficiency."
+  },
+  {
+    "category": "Endocrine",
+    "difficulty": "Easy",
+    "labs": "TSH: 25 mIU/L\nFree T4: low",
+    "choices": [
+      "Primary hypothyroidism",
+      "Graves disease",
+      "SIADH",
+      "This patient cannot exist"
+    ],
+    "answer": "Primary hypothyroidism",
+    "explanation": "High TSH (pituitary trying to stimulate) with low T4 = primary thyroid failure."
+  },
+  {
+    "category": "Endocrine",
+    "difficulty": "Easy",
+    "labs": "TSH: <0.01 mIU/L\nFree T4: high\nFree T3: high",
+    "choices": [
+      "Hyperthyroidism",
+      "Primary hypothyroidism",
+      "Adrenal insufficiency",
+      "This patient cannot exist"
+    ],
+    "answer": "Hyperthyroidism",
+    "explanation": "Suppressed TSH with elevated T3/T4 indicates primary hyperthyroidism."
+  },
+  {
+    "category": "Electrolytes",
+    "difficulty": "Medium",
+    "labs": "Na: 118 mmol/L\nSerum osmolality: low\nUrine osmolality: high\nUrine Na: high",
+    "choices": [
+      "SIADH",
+      "Diabetes insipidus",
+      "DKA",
+      "This patient cannot exist"
+    ],
+    "answer": "SIADH",
+    "explanation": "Excess ADH → water retention → hyponatremia with inappropriately concentrated urine."
+  },
+  {
+    "category": "Electrolytes",
+    "difficulty": "Medium",
+    "labs": "Na: 155 mmol/L\nUrine osmolality: very low\nPatient very thirsty",
+    "choices": [
+      "Diabetes insipidus",
+      "SIADH",
+      "Adrenal insufficiency",
+      "This patient cannot exist"
+    ],
+    "answer": "Diabetes insipidus",
+    "explanation": "Lack of ADH effect → inability to concentrate urine → hypernatremia + dilute urine."
+  },
+  {
+    "category": "Liver",
+    "difficulty": "Easy",
+    "labs": "ALT: 980 U/L\nAST: 850 U/L\nBilirubin: 80 µmol/L\nINR: 1.7",
+    "choices": [
+      "Acute hepatitis",
+      "Iron deficiency anemia",
+      "Primary hypothyroidism",
+      "This patient cannot exist"
+    ],
+    "answer": "Acute hepatitis",
+    "explanation": "Marked transaminase elevation (hepatocellular injury) with bilirubin/INR rise suggests acute liver damage."
+  },
+  {
+    "category": "Pancreas",
+    "difficulty": "Easy",
+    "labs": "Lipase: 1500 U/L\nWBC: 16\nGlucose: 11 mmol/L",
+    "choices": [
+      "Acute pancreatitis",
+      "SIADH",
+      "Respiratory alkalosis",
+      "This patient cannot exist"
+    ],
+    "answer": "Acute pancreatitis",
+    "explanation": "Lipase >3× normal is highly specific for pancreatitis."
+  },
+  {
+    "category": "Cardiology",
+    "difficulty": "Easy",
+    "labs": "Troponin: very high\nCK-MB: high\nChest pain: yes",
+    "choices": [
+      "Myocardial infarction",
+      "B12 deficiency",
+      "Diabetes insipidus",
+      "This patient cannot exist"
+    ],
+    "answer": "Myocardial infarction",
+    "explanation": "Elevated cardiac biomarkers with chest pain = myocardial injury (MI)."
+  },
+  {
+    "category": "Infectious",
+    "difficulty": "Medium",
+    "labs": "WBC: 22\nNeutrophils: high\nCRP: 210 mg/L\nLactate: 5 mmol/L\nBP: low",
+    "choices": [
+      "Sepsis",
+      "Iron deficiency anemia",
+      "Primary hypothyroidism",
+      "This patient cannot exist"
+    ],
+    "answer": "Sepsis",
+    "explanation": "Infection markers + elevated lactate + hypotension = systemic hypoperfusion → sepsis."
+  },
+  {
+    "category": "Impossible",
+    "difficulty": "Hard",
+    "labs": "Hb: 25 g/L\nPatient ran a marathon\nHR: 62 bpm",
+    "choices": [
+      "Iron deficiency anemia",
+      "B12 deficiency",
+      "Normal athlete labs",
+      "This patient cannot exist"
+    ],
+    "answer": "This patient cannot exist",
+    "explanation": "Hb this low cannot sustain oxygen delivery, especially with normal HR and intense exercise."
+  },
+  {
+    "category": "Impossible",
+    "difficulty": "Hard",
+    "labs": "Glucose: 0.4 mmol/L\nPatient giving a TED Talk",
+    "choices": [
+      "Hypoglycemia",
+      "DKA",
+      "Normal fasting glucose",
+      "This patient cannot exist"
+    ],
+    "answer": "This patient cannot exist",
+    "explanation": "Severe hypoglycemia at this level causes coma/seizures, not normal cognition."
+  },
+  {
+    "category": "Renal",
+    "difficulty": "Medium",
+    "labs": "Ca: 1.75 mmol/L\nPhosphate: 2.4 mmol/L\nPTH: high\nCreatinine: high",
+    "choices": [
+      "Chronic kidney disease with secondary hyperparathyroidism",
+      "Primary hyperparathyroidism",
+      "Hyperthyroidism",
+      "This patient cannot exist"
+    ],
+    "answer": "Chronic kidney disease with secondary hyperparathyroidism",
+    "explanation": "CKD → phosphate retention + ↓ vitamin D → hypocalcemia → compensatory ↑ PTH."
+  },
+  {
+    "category": "Endocrine",
+    "difficulty": "Medium",
+    "labs": "Na: 146 mmol/L\nK: 2.8 mmol/L\nBP: high\nAldosterone: high\nRenin: low",
+    "choices": [
+      "Primary hyperaldosteronism",
+      "Adrenal insufficiency",
+      "SIADH",
+      "This patient cannot exist"
+    ],
+    "answer": "Primary hyperaldosteronism",
+    "explanation": "Aldosterone excess → Na retention, K loss, hypertension, with suppressed renin."
   }
 ]
