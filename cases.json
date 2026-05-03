@@ -1,5 +1,7 @@
 [
   {
+    "category": "Endocrine",
+    "difficulty": "Easy",
     "labs": "Na: 120\nK: 5.8\nGlucose: 2.5",
     "choices": [
       "Adrenal insufficiency",
@@ -11,6 +13,8 @@
     "explanation": "Hyponatremia + hyperkalemia + hypoglycemia = adrenal insufficiency"
   },
   {
+    "category": "Impossible",
+    "difficulty": "Hard",
     "labs": "K: 14\npH: 7.9\nPatient texting normally",
     "choices": [
       "Hyperkalemia",
