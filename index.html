@@ -6,25 +6,41 @@
 </head>
 
 <body>
+  <div class="background-blob blob1"></div>
+  <div class="background-blob blob2"></div>
 
-<h1>lab or lie?</h1>
+  <main class="app">
+    <p class="tag">medical lab game</p>
+    <h1>lab or lie?</h1>
+    <p class="subtitle">interpret the labs. diagnose the chaos.</p>
 
-<div class="card">
-  <pre id="labs"></pre>
+    <section class="card">
+      <div class="top-row">
+        <span id="category">case</span>
+        <span id="difficulty">difficulty</span>
+      </div>
 
-  <div id="choices"></div>
+      <pre id="labs"></pre>
 
-  <p id="result"></p>
+      <div id="choices"></div>
 
-  <button onclick="nextCase()">next</button>
-</div>
+      <p id="result"></p>
 
-<div class="score">
-  score: <span id="score">0</span> |
-  streak: <span id="streak">0</span>
-</div>
+      <button class="next-btn" onclick="nextCase()">next case →</button>
+    </section>
 
-<script src="script.js"></script>
+    <div class="score">
+      <div>
+        <span id="score">0</span>
+        <p>score</p>
+      </div>
+      <div>
+        <span id="streak">0</span>
+        <p>streak</p>
+      </div>
+    </div>
+  </main>
 
+  <script src="script.js"></script>
 </body>
 </html>
