@@ -21,6 +21,7 @@ function startInfinite() {
   document.getElementById("score").innerText = score;
   document.getElementById("streak").innerText = streak;
   document.getElementById("gameCard").style.display = "block";
+  document.getElementById("nextBtn").style.display = "inline-block";
 
   loadCase();
 }
@@ -34,6 +35,7 @@ function startQuiz(number) {
   document.getElementById("score").innerText = score;
   document.getElementById("streak").innerText = streak;
   document.getElementById("gameCard").style.display = "block";
+  document.getElementById("nextBtn").style.display = "inline-block";
 
   quizCases = shuffle([...cases]).slice(0, totalQuestions);
 
@@ -122,6 +124,7 @@ function showEndScreen() {
     score === quizCases.length
       ? "perfect score. clinically unstoppable 💅"
       : "not bad. patient survived… probably.";
+  document.getElementById("nextBtn").style.display = "none";
 
 }
 
