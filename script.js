@@ -53,8 +53,9 @@ function loadCase() {
       return;
     }
     c = quizCases[currentIndex];
-    currentCase = c;
   }
+
+  currentCase = c;
 
   document.getElementById("difficulty").innerText = c.difficulty || "easy";
   document.getElementById("result").className = "";
@@ -79,6 +80,7 @@ function checkAnswer(choice) {
   const c = currentCase;
   const buttons = document.querySelectorAll("#choices button");
 
+  // 🔹 1. color buttons
   buttons.forEach(btn => {
     btn.disabled = true;
 
@@ -87,16 +89,17 @@ function checkAnswer(choice) {
     } else if (btn.innerText === choice) {
       btn.classList.add("wrong-btn");
     }
+  });
 
+  // 🔹 2. show pearl (ONLY ONCE)
   if (c.pearl) {
     document.getElementById("pearlText").innerText = "💡 " + c.pearl;
     document.getElementById("pearlBox").style.display = "block";
   } else {
     document.getElementById("pearlBox").style.display = "none";
   }
-    
-  });
 
+  // 🔹 3. result message
   if (choice === c.answer) {
     score++;
     streak++;
@@ -110,6 +113,7 @@ function checkAnswer(choice) {
       "wrong 😭 — " + c.explanation;
   }
 
+  // 🔹 4. update score
   document.getElementById("score").innerText = score;
   document.getElementById("streak").innerText = streak;
 }
