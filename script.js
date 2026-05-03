@@ -4,6 +4,7 @@ let currentIndex = 0;
 let score = 0;
 let streak = 0;
 let totalQuestions = 10;
+let mode = "quiz";
 
 fetch("cases.json")
   .then(res => res.json())
