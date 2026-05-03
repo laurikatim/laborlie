@@ -7,7 +7,10 @@ fetch('cases.json')
   .then(res => res.json())
   .then(data => {
     cases = data;
-    loadCase();
+    loadCase(
+      document.getElementById("category").innerText = c.category || "lab case";
+      document.getElementById("difficulty").innerText = c.difficulty || "easy";
+    );
   });
 
 function loadCase() {
