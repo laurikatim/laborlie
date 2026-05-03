@@ -144,3 +144,11 @@ function showEndScreen() {
 function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
+
+function openNormalValues() {
+  document.getElementById("normalModal").style.display = "block";
+}
+
+function closeNormalValues() {
+  document.getElementById("normalModal").style.display = "none";
+}
