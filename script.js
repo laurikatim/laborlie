@@ -88,10 +88,12 @@ function checkAnswer(choice) {
       btn.classList.add("wrong-btn");
     }
 
-  document.getElementById("pearlText").innerText =
-  "💡 " + (c.pearl || "pattern recognition > memorization");
-  
-  document.getElementById("pearlBox").style.display = "block";
+  if (c.pearl) {
+    document.getElementById("pearlText").innerText = "💡 " + c.pearl;
+    document.getElementById("pearlBox").style.display = "block";
+  } else {
+    document.getElementById("pearlBox").style.display = "none";
+  }
     
   });
 
