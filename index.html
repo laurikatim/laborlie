@@ -20,6 +20,61 @@
       <button onclick="startQuiz(20)">20 cases</button>
       <button onclick="startInfinite()">∞ mode</button>
     </div> 
+
+  <!-- button -->
+  <button onclick="openNormalValues()">normal values</button>
+  
+  <!-- modal -->
+  <div id="normalModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeNormalValues()">&times;</span>
+  
+      <h3>normal values</h3>
+  
+      <div class="values-grid">
+  
+        <p><strong>— Electrolytes —</strong></p>
+        <p><strong>Na</strong>: 135–145 mmol/L</p>
+        <p><strong>K</strong>: 3.5–5.0 mmol/L</p>
+        <p><strong>Cl</strong>: 98–106 mmol/L</p>
+        <p><strong>HCO3</strong>: 22–28 mmol/L</p>
+  
+        <p><strong>— Renal —</strong></p>
+        <p><strong>Creatinine</strong>: ~45–110 µmol/L</p>
+        <p><strong>Urea</strong>: 2.5–7.5 mmol/L</p>
+  
+        <p><strong>— Glucose —</strong></p>
+        <p><strong>Glucose</strong>: 4.0–7.0 mmol/L</p>
+  
+        <p><strong>— ABG —</strong></p>
+        <p><strong>pH</strong>: 7.35–7.45</p>
+        <p><strong>PaCO2</strong>: 35–45 mmHg</p>
+        <p><strong>PaO2</strong>: 80–100 mmHg</p>
+  
+        <p><strong>— Hematology —</strong></p>
+        <p><strong>Hb</strong>: 120–160 g/L</p>
+        <p><strong>MCV</strong>: 80–100 fL</p>
+        <p><strong>WBC</strong>: 4–11 ×10⁹/L</p>
+        <p><strong>Platelets</strong>: 150–400 ×10⁹/L</p>
+  
+        <p><strong>— Liver —</strong></p>
+        <p><strong>ALT</strong>: < 40 U/L</p>
+        <p><strong>AST</strong>: < 40 U/L</p>
+        <p><strong>Bilirubin</strong>: < 20 µmol/L</p>
+  
+        <p><strong>— Endocrine —</strong></p>
+        <p><strong>TSH</strong>: 0.4–4.0 mIU/L</p>
+        <p><strong>Free T4</strong>: ~10–20 pmol/L</p>
+  
+        <p><strong>— Other —</strong></p>
+        <p><strong>Calcium</strong>: 2.2–2.6 mmol/L</p>
+        <p><strong>CRP</strong>: < 5 mg/L</p>
+  
+      </div>
+  
+      <p class="note">values are approximate and vary by lab</p>
+    </div>
+  </div>
     
     <section class="card" id="gameCard" style="display: none;">
       
