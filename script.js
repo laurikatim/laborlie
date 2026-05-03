@@ -14,7 +14,6 @@ function loadCase() {
   current = Math.floor(Math.random() * cases.length);
   const c = cases[current];
 
-  document.getElementById("category").innerText = c.category || "lab case";
   document.getElementById("difficulty").innerText = c.difficulty || "easy";
   document.getElementById("result").className = "";
 
