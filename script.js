@@ -20,6 +20,7 @@ function startInfinite() {
 
   document.getElementById("score").innerText = score;
   document.getElementById("streak").innerText = streak;
+  document.getElementById("gameCard").style.display = "block";
 
   loadCase();
 }
@@ -32,6 +33,7 @@ function startQuiz(number) {
 
   document.getElementById("score").innerText = score;
   document.getElementById("streak").innerText = streak;
+  document.getElementById("gameCard").style.display = "block";
 
   quizCases = shuffle([...cases]).slice(0, totalQuestions);
 
