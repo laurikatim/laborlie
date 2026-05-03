@@ -38,12 +38,17 @@ function startQuiz(number) {
 }
 
 function loadCase() {
-  if (currentIndex >= quizCases.length) {
-    showEndScreen();
-    return;
-  }
+  let c;
 
-  const c = quizCases[currentIndex];
+  if (mode === "infinite") {
+    c = cases[Math.floor(Math.random() * cases.length)];
+  } else {
+    if (currentIndex >= quizCases.length) {
+      showEndScreen();
+      return;
+    }
+    c = quizCases[currentIndex];
+  }
 
   document.getElementById("difficulty").innerText = c.difficulty || "easy";
   document.getElementById("result").className = "";
@@ -93,7 +98,9 @@ function checkAnswer(choice) {
 }
 
 function nextCase() {
-  currentIndex++;
+  if (mode === "quiz") {
+    currentIndex++;
+  }
   loadCase();
 }
 
