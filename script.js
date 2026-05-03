@@ -34,19 +34,30 @@ function loadCase() {
 
 function checkAnswer(choice) {
   const c = cases[current];
+  const buttons = document.querySelectorAll("#choices button");
 
- if (choice === c.answer) {
-  score++;
-  streak++;
-  document.getElementById("result").className = "correct";
-  document.getElementById("result").innerText =
-    "correct 💅 — " + c.explanation;
-} else {
-  streak = 0;
-  document.getElementById("result").className = "wrong";
-  document.getElementById("result").innerText =
-    "wrong 😭 — " + c.explanation;
-}
+  buttons.forEach(btn => {
+    btn.disabled = true;
+
+    if (btn.innerText === c.answer) {
+      btn.classList.add("correct-btn");
+    } else if (btn.innerText === choice) {
+      btn.classList.add("wrong-btn");
+    }
+  });
+
+  if (choice === c.answer) {
+    score++;
+    streak++;
+    document.getElementById("result").className = "correct";
+    document.getElementById("result").innerText =
+      "correct 💅 — " + c.explanation;
+  } else {
+    streak = 0;
+    document.getElementById("result").className = "wrong";
+    document.getElementById("result").innerText =
+      "wrong 😭 — " + c.explanation;
+  }
 
   document.getElementById("score").innerText = score;
   document.getElementById("streak").innerText = streak;
