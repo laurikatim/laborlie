@@ -60,6 +60,7 @@ function loadCase() {
   document.getElementById("result").className = "";
   document.getElementById("labs").innerText = c.labs;
   document.getElementById("result").innerText = "";
+  document.getElementById("pearlBox").style.display = "none";
 
   const choicesDiv = document.getElementById("choices");
   choicesDiv.innerHTML = "";
@@ -86,6 +87,12 @@ function checkAnswer(choice) {
     } else if (btn.innerText === choice) {
       btn.classList.add("wrong-btn");
     }
+
+  document.getElementById("pearlText").innerText =
+  "💡 " + (c.pearl || "pattern recognition > memorization");
+  
+  document.getElementById("pearlBox").style.display = "block";
+    
   });
 
   if (choice === c.answer) {
