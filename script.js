@@ -1,22 +1,41 @@
 let cases = [];
-let current = 0;
+let quizCases = [];
+let currentIndex = 0;
 let score = 0;
 let streak = 0;
+let totalQuestions = 10;
 
-fetch('cases.json')
+fetch("cases.json")
   .then(res => res.json())
   .then(data => {
     cases = data;
-    loadCase();
+    startQuiz(10);
   });
 
+function startQuiz(number) {
+  totalQuestions = number;
+  score = 0;
+  streak = 0;
+  currentIndex = 0;
+
+  document.getElementById("score").innerText = score;
+  document.getElementById("streak").innerText = streak;
+
+  quizCases = shuffle([...cases]).slice(0, totalQuestions);
+
+  loadCase();
+}
+
 function loadCase() {
-  current = Math.floor(Math.random() * cases.length);
-  const c = cases[current];
+  if (currentIndex >= quizCases.length) {
+    showEndScreen();
+    return;
+  }
+
+  const c = quizCases[currentIndex];
 
   document.getElementById("difficulty").innerText = c.difficulty || "easy";
   document.getElementById("result").className = "";
-
   document.getElementById("labs").innerText = c.labs;
   document.getElementById("result").innerText = "";
 
@@ -32,7 +51,7 @@ function loadCase() {
 }
 
 function checkAnswer(choice) {
-  const c = cases[current];
+  const c = quizCases[currentIndex];
   const buttons = document.querySelectorAll("#choices button");
 
   buttons.forEach(btn => {
@@ -63,5 +82,25 @@ function checkAnswer(choice) {
 }
 
 function nextCase() {
+  currentIndex++;
   loadCase();
+}
+
+function showEndScreen() {
+  document.getElementById("difficulty").innerText = "done";
+  document.getElementById("labs").innerText =
+    `Quiz complete!\n\nFinal score: ${score}/${quizCases.length}`;
+
+  document.getElementById("choices").innerHTML = "";
+
+  document.getElementById("result").className = "";
+  document.getElementById("result").innerText =
+    score === quizCases.length
+      ? "perfect score. clinically unstoppable 💅"
+      : "not bad. patient survived… probably.";
+
+}
+
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
 }
