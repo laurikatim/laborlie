@@ -1,0 +1,45 @@
+body {
+  background: #ffe4ec;
+  font-family: Georgia, serif;
+  text-align: center;
+  padding: 50px;
+  color: #5a2a3a;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.card {
+  background: #fff0f5;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #ff8fab;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #ff5c8a;
+}
+
+#result {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.score {
+  margin-top: 20px;
+}
