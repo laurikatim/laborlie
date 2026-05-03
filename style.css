@@ -43,3 +43,15 @@ button:hover {
 .score {
   margin-top: 20px;
 }
+
+.correct-btn {
+  background: #d4f8e8 !important;
+  border: 1px solid #7ed6a8 !important;
+  color: #1e6b4c !important;
+}
+
+.wrong-btn {
+  background: #ffe0e6 !important;
+  border: 1px solid #ff9bb0 !important;
+  color: #a61e4d !important;
+}
