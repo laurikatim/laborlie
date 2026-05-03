@@ -1,0 +1,24 @@
+[
+  {
+    "labs": "Na: 120\nK: 5.8\nGlucose: 2.5",
+    "choices": [
+      "Adrenal insufficiency",
+      "DKA",
+      "SIADH",
+      "This patient cannot exist"
+    ],
+    "answer": "Adrenal insufficiency",
+    "explanation": "Hyponatremia + hyperkalemia + hypoglycemia = adrenal insufficiency"
+  },
+  {
+    "labs": "K: 14\npH: 7.9\nPatient texting normally",
+    "choices": [
+      "Hyperkalemia",
+      "Metabolic alkalosis",
+      "Normal variation",
+      "This patient cannot exist"
+    ],
+    "answer": "This patient cannot exist",
+    "explanation": "K of 14 is incompatible with life 😭"
+  }
+]
