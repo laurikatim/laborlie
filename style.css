@@ -55,3 +55,17 @@ button:hover {
   border: 1px solid #ff9bb0 !important;
   color: #a61e4d !important;
 }
+
+.quiz-settings {
+  margin-bottom: 20px;
+}
+
+.quiz-settings p {
+  margin-bottom: 10px;
+  opacity: 0.75;
+}
+
+.quiz-settings button {
+  display: inline-block;
+  margin: 5px;
+}
