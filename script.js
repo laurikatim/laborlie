@@ -199,3 +199,11 @@ function goHome() {
   document.getElementById("pearlBox").style.display = "none";
   document.getElementById("nextBtn").style.display = "inline-block";
 }
+
+window.onclick = function(event) {
+  const modal = document.getElementById("normalModal");
+
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
