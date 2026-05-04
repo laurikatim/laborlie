@@ -6,12 +6,17 @@ let score = 0;
 let streak = 0;
 let totalQuestions = 10;
 let mode = "quiz";
+let selectedCategory = "All";
 
 fetch("cases.json")
   .then(res => res.json())
   .then(data => {
     cases = data;
   });
+
+function setCategory(category) {
+  selectedCategory = category;
+} 
 
 function startInfinite() {
   mode = "infinite";
@@ -37,7 +42,11 @@ function startQuiz(number) {
   document.getElementById("gameCard").style.display = "block";
   document.getElementById("nextBtn").style.display = "inline-block";
 
-  quizCases = shuffle([...cases]).slice(0, totalQuestions);
+  let filteredCases = selectedCategory === "All"
+    ? cases
+    : cases.filter(c => c.category === selectedCategory);
+
+  quizCases = shuffle([...filteredCases]).slice(0, totalQuestions);
 
   loadCase();
 }
@@ -46,7 +55,11 @@ function loadCase() {
   let c;
 
   if (mode === "infinite") {
-    c = cases[Math.floor(Math.random() * cases.length)];
+    let filteredCases = selectedCategory === "All"
+      ? cases
+      : cases.filter(c => c.category === selectedCategory);
+
+    c = filteredCases[Math.floor(Math.random() * filteredCases.length)];
   } else {
     if (currentIndex >= quizCases.length) {
       showEndScreen();
