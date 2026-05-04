@@ -212,10 +212,18 @@ button:hover {
 .creator {
   opacity: 0.6;
   transition: opacity 0.3s;
+  margin-top: 50px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  font-size: 12px;
 }
 
 .creator:hover {
   opacity: 1;
+}
+
+.score {
+  margin-bottom: 30px;
 }
 
 .share-btn {
