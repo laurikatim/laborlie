@@ -293,3 +293,23 @@ button:active {
   opacity: 0.6;
   margin-top: 10px;
 }
+
+html, body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  min-height: 100svh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
