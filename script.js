@@ -162,3 +162,20 @@ function openNormalValues() {
 function closeNormalValues() {
   document.getElementById("normalModal").style.display = "none";
 }
+
+function shareGame() {
+  const url = window.location.href;
+  const text = "play this chaotic medical lab game 😭💅";
+
+  if (navigator.share) {
+    navigator.share({
+      title: "lab or lie?",
+      text: text,
+      url: url
+    });
+  } else {
+    // fallback (copy link)
+    navigator.clipboard.writeText(url);
+    alert("link copied 💌");
+  }
+}
