@@ -179,3 +179,23 @@ function shareGame() {
     alert("link copied 💌");
   }
 }
+
+function goHome() {
+  // hide game
+  document.getElementById("gameCard").style.display = "none";
+
+  // reset scores
+  score = 0;
+  streak = 0;
+  currentIndex = 0;
+
+  document.getElementById("score").innerText = "0";
+  document.getElementById("streak").innerText = "0";
+
+  // clear UI
+  document.getElementById("labs").innerText = "";
+  document.getElementById("choices").innerHTML = "";
+  document.getElementById("result").innerText = "";
+  document.getElementById("pearlBox").style.display = "none";
+  document.getElementById("nextBtn").style.display = "inline-block";
+}
