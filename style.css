@@ -59,6 +59,23 @@ button:active {
   transform: scale(0.96);
 }
 
+.category-settings {
+  margin: 15px 0;
+}
+
+.category-settings p {
+  margin-bottom: 8px;
+  opacity: 0.75;
+}
+
+.category-settings button {
+  display: inline-block;
+  margin: 4px;
+  padding: 8px 14px;
+  font-size: 13px;
+  background: #f5b6c5;
+}
+
 #result {
   margin-top: 20px;
   font-size: clamp(15px, 4vw, 18px);
