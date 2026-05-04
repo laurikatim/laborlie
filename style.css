@@ -192,3 +192,22 @@ button:hover {
     text-align: center;
   }
 }
+
+.creator a {
+  color: #5a2a3a;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.creator a:hover {
+  border-bottom: 1px solid #5a2a3a;
+}
+
+.creator {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.creator:hover {
+  opacity: 1;
+}
