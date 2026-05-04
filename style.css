@@ -10,7 +10,7 @@ h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 80px;
   font-weight: normal;
-  margin: 10px 0;
+  margin: 5px 0 10px 0;
   cursor: pointer;
   transition: opacity 0.2s;
 }
@@ -38,10 +38,17 @@ button {
   color: white;
   cursor: pointer;
   font-size: 15px;
+  transition: all 0.2s ease;
 }
 
 button:hover {
   background: #ff5c8a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 92, 138, 0.25);
+}
+
+button:active {
+  transform: scale(0.96);
 }
 
 #result {
@@ -50,7 +57,17 @@ button:hover {
 }
 
 .score {
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.score div {
+  background: rgba(255,255,255,0.4);
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 .correct-btn {
@@ -66,6 +83,7 @@ button:hover {
 }
 
 .quiz-settings {
+  margin: 20px 0;
   margin-bottom: 20px;
 }
 
@@ -79,6 +97,9 @@ button:hover {
   margin: 5px;
 }
 
+.quiz-settings button:last-child {
+  background: #f5b6c5;
+}
 #pearlBox {
   margin-top: 10px;
   padding: 12px;
@@ -164,6 +185,9 @@ button:hover {
 
 .cat-container {
   text-align: center;
+  background: rgba(255,255,255,0.5);
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .cat {
@@ -210,20 +234,15 @@ button:hover {
 }
 
 .creator {
-  opacity: 0.6;
-  transition: opacity 0.3s;
-  margin-top: 50px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(0,0,0,0.1);
+  margin-top: 60px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(90, 42, 58, 0.15);
   font-size: 12px;
+  opacity: 0.6;
 }
 
 .creator:hover {
   opacity: 1;
-}
-
-.score {
-  margin-bottom: 30px;
 }
 
 .share-btn {
@@ -242,4 +261,35 @@ button:hover {
 .share-btn:hover {
   background: #ff8fab;
   color: white;
+}
+
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.background-blob {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: #ffd6e0;
+  border-radius: 50%;
+  filter: blur(90px);
+  z-index: -1;
+}
+
+.blob1 {
+  top: -100px;
+  left: -100px;
+}
+
+.blob2 {
+  bottom: -100px;
+  right: -100px;
+}
+
+#progress {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-top: 10px;
 }
