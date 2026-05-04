@@ -230,3 +230,12 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+function selectNumber(number) {
+  selectedNumber = number;
+
+  document.getElementById("categoryResponse").innerText =
+    selectedCategory + " selected · " + number + " cases";
+
+  document.getElementById("startTestBtn").style.display = "inline-block";
+}
