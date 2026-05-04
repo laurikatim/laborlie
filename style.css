@@ -2,13 +2,14 @@ body {
   background: #ffe4ec;
   font-family: Georgia, serif;
   text-align: center;
-  padding: 50px;
+  padding: 20px;
   color: #5a2a3a;
+  font-size: clamp(14px, 3.5vw, 18px);
 }
 
 h1 {
   font-family: 'MonteCarlo', cursive;
-  font-size: 80px;
+  font-size: clamp(36px, 8vw, 80px);
   font-weight: normal;
   margin: 5px 0 10px 0;
   cursor: pointer;
@@ -26,7 +27,8 @@ h1:hover {
   background: #fff0f5;
   padding: 30px;
   border-radius: 20px;
-  max-width: 500px;
+  width: 100%;
+  max-width: 100%;
   margin: auto;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -40,7 +42,7 @@ button {
   background: #ff8fab;
   color: white;
   cursor: pointer;
-  font-size: 15px;
+  font-size: clamp(14px, 3.5vw, 16px);
   transition: all 0.2s ease;
 }
 
@@ -56,6 +58,7 @@ button:active {
 
 #result {
   margin-top: 20px;
+  font-size: clamp(15px, 4vw, 18px);
   font-style: italic;
 }
 
@@ -137,21 +140,25 @@ button:active {
 
 .values-grid p {
   margin: 6px 0;
-  font-size: 14px;
+  font-size: clamp(13px, 3.5vw, 15px);
 }
-
 @media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
   .values-grid {
     grid-template-columns: 1fr;
   }
+
+  .header {
     flex-direction: column;
-    text-align: center;
+    gap: 10px;
   }
 
   .title-container {
     text-align: center;
   }
-  
 }
 
 .modal {
@@ -190,7 +197,7 @@ button:active {
 
 .note {
   margin-top: 10px;
-  font-size: 12px;
+  font-size: clamp(11px, 3vw, 13px);
   opacity: 0.7;
 }
 
@@ -206,7 +213,7 @@ button:active {
 }
 
 .cat-label {
-  font-size: 12px;
+  font-size: clamp(11px, 3vw, 13px);
   opacity: 0.6;
   margin-top: 5px;
 }
@@ -237,7 +244,7 @@ button:active {
   margin-top: 60px;
   padding-top: 15px;
   border-top: 1px solid rgba(90, 42, 58, 0.15);
-  font-size: 12px;
+  font-size: clamp(11px, 3vw, 13px);
   opacity: 0.6;
 }
 
@@ -264,8 +271,8 @@ button:active {
 }
 
 .app {
-  max-width: 700px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 .background-blob {
@@ -289,7 +296,7 @@ button:active {
 }
 
 #progress {
-  font-size: 13px;
+  font-size: clamp(11px, 3vw, 13px);
   opacity: 0.6;
   margin-top: 10px;
 }
