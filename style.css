@@ -313,3 +313,28 @@ body {
   padding: 40px 20px;
   box-sizing: border-box;
 }
+
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+
+  .app {
+    width: 100%;
+    min-height: 100svh;
+    padding: 35px 22px 45px;
+  }
+
+  .header {
+    margin-top: 20px;
+  }
+}
+
+.creator {
+  margin-top: 70px;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+}
