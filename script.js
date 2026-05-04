@@ -7,6 +7,7 @@ let streak = 0;
 let totalQuestions = 10;
 let mode = "quiz";
 let selectedCategory = "All";
+let selectedNumber = 10;
 
 fetch("cases.json")
   .then(res => res.json())
@@ -16,7 +17,16 @@ fetch("cases.json")
 
 function setCategory(category) {
   selectedCategory = category;
-} 
+
+  document.getElementById("categoryResponse").innerText =
+    category + " selected";
+
+  document.getElementById("startTestBtn").style.display = "inline-block";
+}
+
+function startSelectedQuiz() {
+  startQuiz(selectedNumber);
+}
 
 function startInfinite() {
   mode = "infinite";
