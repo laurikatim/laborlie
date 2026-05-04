@@ -29,7 +29,7 @@ h1:hover {
   padding: 30px;
   border-radius: 20px;
 
-  width: 70%;
+  width: 100%;
   max-width: 700px;   /* 👈 controls max size on Mac */
   margin: 0 auto;     /* 👈 centers it */
 
@@ -274,9 +274,7 @@ button:active {
 }
 
 .app {
-  width: 70%;
-  padding: 0 15px;   /* 👈 THIS creates equal left/right space */
-  box-sizing: border-box;
+  width: 100%;
 }
 
 .background-blob {
