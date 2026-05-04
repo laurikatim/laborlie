@@ -13,6 +13,9 @@ h1 {
   margin: 5px 0 10px 0;
   cursor: pointer;
   transition: opacity 0.2s;
+  letter-spacing: 1px;
+  color: #ff3b8d;
+  text-shadow: 0 4px 10px rgba(255, 59, 141, 0.3);
 }
 
 h1:hover {
