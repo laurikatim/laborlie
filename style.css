@@ -230,13 +230,16 @@ button:hover {
   margin-top: 15px;
   padding: 10px 18px;
   border-radius: 20px;
-  border: none;
-  background: #ff8fab;
-  color: white;
-  cursor: pointer;
+
+  background: transparent;
+  color: #ff8fab;
+  border: 2px solid #ff8fab;
+
   font-size: 14px;
+  cursor: pointer;
 }
 
 .share-btn:hover {
-  background: #ff5c8a;
+  background: #ff8fab;
+  color: white;
 }
